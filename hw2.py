@@ -36,7 +36,6 @@ plt.show()
 # Task 1.3 DT
 kf = KFold(n_splits=5, shuffle=True, random_state=42)
 dt_cv_scores = cross_val_score(best_dt, X, y, cv=kf, scoring='accuracy')
-print("Decision Tree CV Accuracies:", dt_cv_scores)
 print("Average Decision Tree CV Accuracy: {:.4f}".format(np.mean(dt_cv_scores)))
 
 # Task 1.4 RF
@@ -55,5 +54,4 @@ print("Best Random Forest Parameters:", grid_rf.best_params_)
 
 # 5 fold cv rf and dt
 rf_cv_scores = cross_val_score(best_rf, X, y, cv=kf, scoring='accuracy')
-print("Random Forest CV Accuracies:", rf_cv_scores)
 print("Average Random Forest CV Accuracy: {:.4f}".format(np.mean(rf_cv_scores)))
